@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) {
-    Teacher pheak = new Teacher(1, "pheak", 1000);
+    Teacher pheak = new Teacher(1, "pheak", 900);
     Teacher Lina = new Teacher(2, "Lina", 500);
     Teacher disney  = new Teacher(3, "disney", 3000);
 
@@ -26,8 +26,14 @@ public class Main {
 
     School E2STEMPVH = new School (teacherList, studentList);
 
+    //get school fees
     tina.payFees(500);
+    biney.payFees(500);
     System.out.println("total money earned is: $"+E2STEMPVH.getTotalMoneyEarned());
+
+    //pay for teachers
+    pheak.receivedSalary(pheak.getSalary());
+    System.out.println("E2STEMPVH has spent salary for "+pheak.getName()+" and now has: $"+E2STEMPVH.getTotalMoneyEarned());
 
   }
 }
