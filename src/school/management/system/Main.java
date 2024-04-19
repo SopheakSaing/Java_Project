@@ -35,5 +35,7 @@ public class Main {
     pheak.receivedSalary(pheak.getSalary());
     System.out.println("E2STEMPVH has spent salary for "+pheak.getName()+" and now has: $"+E2STEMPVH.getTotalMoneyEarned());
 
+    System.out.println(tina); //output: src.school.management.system.Students@3fb6a447, so need to use toString()
+
   }
 }

@@ -60,4 +60,14 @@ public class Students {
   public int getRemainingFees() {
     return totalFees - paidFee;
   }
+
+  @Override
+  /*a way to represent obj
+  ex: in the case that print out user would be as address, so we use toString() to convert that
+   */
+
+  public String toString() {
+    return "Student's name: " + name +
+          "total fees paid so far: $" + paidFee;
+  }
 }
