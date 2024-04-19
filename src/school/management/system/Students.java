@@ -50,4 +50,14 @@ public class Students {
   public int getTotalFees() {
     return totalFees;
   }
+  public void payFees(int fees) {
+    //void type methods cuz dun have to return anything back for this method()
+    paidFee += fees;
+    School.updateTotalMoneyEarned(paidFee);
+
+  }
+
+  public int getRemainingFees() {
+    return totalFees - paidFee;
+  }
 }

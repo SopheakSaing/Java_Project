@@ -1,19 +1,21 @@
 package src.school.management.system;
+
 import java.util.List;
 //many teachers, many students
 
 public class School {
+
   //not gonna use array cuz dk no students and teachers but ArrayList
   private List<Teacher> teachers;
   private List<Students> students;
-  private int totalMoneyEarned;
-  private int totalMoneySpent;
+  private static int totalMoneyEarned;
+  private static int totalMoneySpent;
 
   public School(final List<Teacher> teachers, final List<Students> students) {
     this.teachers = teachers;
     this.students = students;
-    this.totalMoneyEarned=0;
-    this.totalMoneySpent=0;
+    this.totalMoneyEarned = 0;
+    this.totalMoneySpent = 0;
   }
 
   //use GET to return the field of the attribute
@@ -46,13 +48,13 @@ public class School {
   }
 
 
-  public void updateTotalMoneyEarned(int MoneyEarned) {
+  public static void updateTotalMoneyEarned(int MoneyEarned) {
     totalMoneyEarned += MoneyEarned;
   }
 
 
   // update money which after spent money on teachers
-  public void updateTotalMoneySpent(int MoneySpent) {
+  public static void updateTotalMoneySpent(int MoneySpent) {
     totalMoneyEarned -= MoneySpent;
   }
 }
